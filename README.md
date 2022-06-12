@@ -1,5 +1,3 @@
-https://discord.gg/r5QH5bJ63K
-
 # Installation
 
 npm install next  
