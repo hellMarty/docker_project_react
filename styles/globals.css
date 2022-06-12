@@ -1,0 +1,41 @@
+/* 
+background: #F9F7F0
+background_dark: #E9E7E0
+light: #18B7BE
+light_light: #28C7CE
+light_dark: #08A7AE
+highlight: #178CA4
+highlight_light: #279CB4
+highlight_dark: #077C94
+dark: #072A40
+dark_light: #173A50
+*/
+
+:root{
+  background: #F9F7F0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.error_button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem;
+}

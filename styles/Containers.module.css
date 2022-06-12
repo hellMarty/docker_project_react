@@ -1,0 +1,113 @@
+
+.container_card {
+  
+  cursor: pointer;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.2rem solid #eaeaea;
+  border-radius: 1rem;
+  transition: color 0.15s ease, border-color 0.15s ease;
+    margin: 0.5rem;
+  background: #28C7CE;
+}
+
+.container_list{
+    display: flex;
+    flex-direction: column;
+    background: #E9E7E0;
+    overflow: scroll;
+    border: 0.1rem solid #eaeaea;
+    /* border-radius: 1rem;
+    transition: color 0.15s ease, border-color 0.15s ease; */
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.button{
+  cursor: pointer;
+    display: flex;
+  border: 0.2rem solid #eaeaea;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0.5rem;
+    color: #072A40;
+    font-weight: bold;
+  background: #28C7CE;
+  justify-content: center;
+  align-items: center;
+
+  /* background: #178CA4; */
+  /* background: #072A40; */
+    border-radius: 1rem;
+
+    /* unselectable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.button:hover{
+    /* background: #178CA4; */
+    border-color: #178CA4;
+}
+
+.container_card:hover{
+    border-color: #178CA4;
+}
+.card_line_left {
+  margin: 0.3rem;
+  float: left;
+    color: #072A40;
+    font-weight: bold;  
+
+/* unselectable */
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.card_line_right {
+color: #072A40;
+  margin: 0.3rem;
+  float: right;
+
+}
+
+.filter{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  /* background: #178CA4; */
+  /* background: #28C7CE; */
+}
+.filter__option{
+  display:flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 46.8rem) {
+  .main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+    .container_list{
+        display: flex;
+        justify-content: left;
+
+        min-width: 46.8rem;
+        /* max-width: 30rem; */
+      }
+}

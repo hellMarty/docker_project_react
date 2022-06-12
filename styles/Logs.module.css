@@ -1,0 +1,13 @@
+
+.list__item { 
+  background: #18B7BE;
+  
+}
+
+.list{
+    list-style-type: none;
+}
+
+.list__item:nth-child(odd) { 
+    background: #E9E7E0; 
+}

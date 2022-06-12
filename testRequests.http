@@ -1,0 +1,122 @@
+###List containers
+POST http://localhost:3000/api/containers/list
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "filter": {"all": true}
+}
+###Get container
+POST http://localhost:3000/api/container
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "5e23dc6be45d036a6a8d42c1f0a36998ffcb6b71ec486e7ce424ed354509b2f9"
+}
+###Get container logs
+POST http://localhost:3000/api/container/logs
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "fdd8401196421bb764b1d24e4fdadf20e6b1ca52da889aecae773280de86aa70"
+}
+###Start container
+POST http://localhost:3000/api/containers/start
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "33b2b2fb5a9ea5093b84c19d847c6aa2cd2b5459e5553d2d5822dbebc323c9cb"
+}
+###Pause container
+POST http://localhost:3000/api/containers/pause
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "33b2b2fb5a9ea5093b84c19d847c6aa2cd2b5459e5553d2d5822dbebc323c9cb"
+}
+###Stop container
+POST http://localhost:3000/api/containers/stop
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "33b2b2fb5a9ea5093b84c19d847c6aa2cd2b5459e5553d2d5822dbebc323c9cb"
+}
+###Kill container
+POST http://localhost:3000/api/containers/kill
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "e1149a259fb27850c277013e355d8e9a72a53a74ff19949542fc790992e9a174"
+}
+###Create container
+POST http://localhost:3000/api/containers/create
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "image" : "redis"
+}
+###Delete container
+DELETE http://localhost:3000/api/container
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "af1cb679c8704d6e8479ce3cb9c31537dc5a406539c02a384f1ab78931a84abd"
+}
+###Exec container
+POST http://localhost:3000/api/containers/exec
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "containerId" : "fdd8401196421bb764b1d24e4fdadf20e6b1ca52da889aecae773280de86aa70",
+  "options" : {
+    "Cmd" : ["pwd"],
+    "AttachStdin" : true,
+    "AttachStdout" : true,
+    "AttachStderr" : true
+  }
+}
+###List images
+POST http://localhost:3000/api/images/list
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375"
+}
+###Search images
+POST http://localhost:3000/api/images/search
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "term" : "redis"
+}
+###Create image
+POST http://localhost:3000/api/images/create
+Content-Type: application/json
+
+{
+  "host" : "127.0.0.1",
+  "port" : "2375",
+  "image" : "redis"
+}
