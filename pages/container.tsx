@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import styles from '../styles/Container.module.css';
 import { useEffect, useState } from "react";
 import { NextRouter, useRouter } from "next/router";
+import ErrorButton from '../components/ErrorButton';
 
 export const Container = () => {
   const router = useRouter();
@@ -32,22 +33,11 @@ export const Container = () => {
       });
   });
 
-  const errorButton = (e) => {
-    e.preventDefault();
-    router.push("/");
-  }
-
   return (
     <div>
       <Header />
       <div className={styles.main} >
-        {!container ? (
-          <div className={styles.error__button} >
-            <div>Error! </div>
-              < button type="button" onClick={errorButton} style={{ width: "fit-content", margin: "1rem" }
-              }> Try Again </button>
-            </div>
-            ) : (
+        {!container ? ( <ErrorButton /> ) : (
             <div>
               <h2 className={styles.name}>{container.Name.substring(1)} </h2>
               < div className={styles.container__card} style={{ cursor: "unset" }}>

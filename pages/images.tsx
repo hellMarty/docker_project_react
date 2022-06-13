@@ -1,13 +1,11 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react'
 import { ImageCard } from '../components/ImageCard';
 import Header from '../components/Header';
 import styles from '../styles/Images.module.css'
+import ErrorButton from '../components/ErrorButton';
 
 const Images = () => {
-
-    const router = useRouter();
     const [Images, setImages] = useState<any[]>([]);
     const [isError, setIsError] = useState(false);
 
@@ -36,26 +34,15 @@ const Images = () => {
 
     })
 
-    const errorButton = (e) => {
-        e.preventDefault();
-        router.push("/");
-    }
-
     return (
         <div>
             <Header  />
             <main className={styles.main}>
-                {isError ? (
-                    <div className={styles.error__button}>
-                        <div>Error!</div>
-                        <button type="button" onClick={errorButton} style={{ width: "fit-content", margin: "1rem" }}>Try Again</button>
-                        <div style={{ fontSize: "0.7rem" }}>Check if Docker Desktop is running.</div>
-                    </div>
-                ) : (
-                        <div className={styles.image_list}>
-                            <Link href="/search"><div className={styles.button}>Pull new image</div></Link>
+                {isError ? ( <ErrorButton /> ) : (
+                    <div className={styles.image_list}>
+                        <Link href="/search"><div className={styles.button}>Pull new image</div></Link>
                         {Images.map(image => <ImageCard key={image.Id} id={image.Id} tags={image.RepoTags} created={image.Created} size={image.Size} />)}
-                        </div>
+                    </div>
                 )}
             </main>
         </div>

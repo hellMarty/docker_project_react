@@ -57,17 +57,12 @@ const Search = () => {
                     </form>
 
                     {images.length > 0 &&
-
-                    
                         <div>
                             {
                                 images.map(image => <SearchCard stars={image.star_count} official={image.is_official.toString()}
                                     name={image.name} automated={image.is_automated.toString()} description={image.description} />)
                             }
-                            </div>
-                        
-                    
-
+                        </div>
                     }
                 </div>
             </main>

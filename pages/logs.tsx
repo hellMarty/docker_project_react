@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import { useEffect, useState } from "react";
 import styles from '../styles/Logs.module.css';
 import { useRouter } from "next/router";
+import ErrorButton from '../components/ErrorButton';
 
 export const Logs = () => {
     const router = useRouter();
@@ -31,25 +32,12 @@ export const Logs = () => {
             });
     });
 
-    const errorButton = (e) => {
-        e.preventDefault();
-        router.push("/");
-    }
-
     return (
         <div>
             <Header />
             <div>
-                {!logs ? (
-                    <div>
-                        <div>Error! </div>
-                        < button type="button" onClick={errorButton} style={{ width: "fit-content", margin: "1rem" }
-                        }> Try Again </button>
-                    </div>
-                ) : (
-                    <div>
-                            <div className={styles.list}>{logs.map(log => <div className = {styles.list__item}>{log}</div>)}</div>
-                    </div>
+                {!logs ? ( <ErrorButton /> ) : (
+                    <div className={styles.list}>{logs.map(log => <div className = {styles.list__item}>{log}</div>)}</div>
                 )}
             </div>
         </div>

@@ -15,8 +15,6 @@ const Index = () => {
 
     localStorage.setItem('host', hostAndPort[0])
     localStorage.setItem('port', hostAndPort[1])
-    // jedine presmerovanie cez router, lebo to je
-    // sucast form handlingu
     router.push('/containers')
 
   }
