@@ -18,5 +18,9 @@ yarn dev
 ```
 
 Run Docker Desktop
+  
+  -> In the Settings enable the option "Expose daemon on tcp://localhost:2375 without TLS"
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+  -> Insert "localhost:2375" in Address and port
